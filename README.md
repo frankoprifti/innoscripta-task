@@ -4,6 +4,12 @@ The challenge is to create the user interface for a
 news aggregator website that pulls articles from various sources and displays them in a clean,
 easy-to-read format
 
+## Preview
+
+You can test the deployed version on vercel at this link:
+
+https://innoscripta-task.vercel.app/
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
