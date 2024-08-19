@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# innoscripta - news aggregator
 
-## Getting Started
+The challenge is to create the user interface for a
+news aggregator website that pulls articles from various sources and displays them in a clean,
+easy-to-read format
 
-First, run the development server:
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 18.x recommended)
+- Yarn (or npm)
+- Docker
+- Docker Compose
+
+## Running the Application Locally
+
+To run the application on your local machine, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/frankoprifti/innoscripta-task.git
+   cd innoscripta-task
+   ```
+
+2. **Install Dependencies:**
+   Install all the required dependencies using Yarn:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Set Up Environment Variables:**
+   Create a .env file in the root directory and add your environment variables following the .env.example file. You can use the example env variables for testing purposes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Run the Development Server:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn dev
+```
 
-## Learn More
+The application should now be running at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Build and Start the Production Server:**
+   If you want to test the production build locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn build
+yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This will run the application in production mode at http://localhost:3000.
 
-## Deploy on Vercel
+## Running the Application with Docker
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can also run the application within a Docker container. Follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+First, navigate to the project directory and build the Docker image using Docker Compose:
+
+1. **Build the docker image:**
+
+```bash
+docker-compose up --build
+```
+
+This will build the Docker image and start the containerized application.
+
+2. **Access the Application:**
+   Once the container is running, you can access the application at http://localhost:3000.
